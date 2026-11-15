@@ -4,8 +4,8 @@ import requests, time;
 def fetch_t(version: str, headers: str, email_r: str = "", pass_r: str = ""): 
     email: str = ""; 
     password: str = ""; 
-    if email_r!="": email=str(input("Enter Discord Email: ")); 
-    if pass_r!="": password=str(input("Enter Password: ")); 
+    if email_r=="": email=str(input("Enter Discord Email: ")); 
+    if pass_r=="": password=str(input("Enter Password: ")); 
     login_data = { 
             "login": email, 
             "password": password, 
