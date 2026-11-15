@@ -1,7 +1,7 @@
 import requests, time; 
 
 
-def fetch_t(version: str, headers: str, email_r: str = "", pass_r: str = "") -> str | int: 
+def fetch_t(version: str, headers: str, email_r: str = "", pass_r: str = ""): 
     email: str = ""; 
     password: str = ""; 
     if email_r!="": email=str(input("Enter Discord Email: ")); 
@@ -16,7 +16,7 @@ def fetch_t(version: str, headers: str, email_r: str = "", pass_r: str = "") -> 
             "https://discord.com/api/{version}/auth/login", 
             json=login_data, 
             headers=headers 
-            } 
+            ); 
     i: int=0; 
     while i<15: 
         resp = inner(); 
