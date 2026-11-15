@@ -13,7 +13,7 @@ def fetch_t(version: str, headers: str, email_r: str = "", pass_r: str = ""):
     }; 
     def inner(): 
         return requests.post( 
-            "https://discord.com/api/{version}/auth/login", 
+            f"https://discord.com/api/{version}/auth/login", 
             json=login_data, 
             headers=headers 
             ); 
